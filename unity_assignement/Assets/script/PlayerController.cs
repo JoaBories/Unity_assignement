@@ -39,5 +39,13 @@ public class PlayerController : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("walking", false);
         }
+
+        if (GetComponent<Rigidbody2D>().velocity.y > 0.5f || GetComponent<Rigidbody2D>().velocity.y < -0.5f)
+        {
+            GetComponent<Animator>().SetBool("air", true);
+            if (GetComponent<Rigidbody2D>().velocity.y < 0) GetComponent<Animator>().SetBool("up", false);
+            else GetComponent<Animator>().SetBool("up", true);
+        }
+        else GetComponent<Animator>().SetBool("air", false); 
     }
 }
