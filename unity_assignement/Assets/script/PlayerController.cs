@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int speed;
-    public int jumpForce;
+    public float speed;
+    public float jumpForce;
+    //public GameObject collisionFix;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +17,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) /*&& !collisionFix.GetComponent<CollisionFix>().collisionState*/)
         {
             GetComponent<SpriteRenderer>().flipX = false;
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
             GetComponent<Animator>().SetBool("walking", true);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) /*&& !collisionFix.GetComponent<CollisionFix>().collisionState*/)
         {
             GetComponent<SpriteRenderer>().flipX = true;
             transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
