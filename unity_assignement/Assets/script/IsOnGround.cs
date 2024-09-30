@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionFix : MonoBehaviour
+public class IsOnGround : MonoBehaviour
 {
-    public bool collisionState = false;
     public Vector3 startingPosition;
+    public bool isOnGround;
 
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
     void Update()
     {
         transform.localPosition = startingPosition;
@@ -14,11 +20,11 @@ public class CollisionFix : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground")) collisionState = true;
+        if (collision.gameObject.CompareTag("Ground")) isOnGround = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground")) collisionState = false;
+        if (collision.gameObject.CompareTag("Ground")) isOnGround = false;
     }
 }
