@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.U2D;
 
 public class PlayerController : MonoBehaviour
 {
@@ -33,6 +35,8 @@ public class PlayerController : MonoBehaviour
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         Animator animator = GetComponent<Animator>();
         Rigidbody2D rigidBody2D = GetComponent<Rigidbody2D>();
+        Light2D spotLight = GetComponent<Light2D>();
+
         collisionRight = collisionFixRight.GetComponent<CollisionFix>().collisionState;
         collisionLeft = collisionFixLeft.GetComponent<CollisionFix>().collisionState;
         
@@ -126,8 +130,16 @@ public class PlayerController : MonoBehaviour
 
             if (ground) canDoubleJump = true;
 
-            if (canDoubleJump) spriteRenderer.color = Color.green;
-            else spriteRenderer.color = Color.yellow;
+            if(canDoubleJump)
+            {
+                spriteRenderer.color = Color.green;
+                spotLight.color = Color.green;
+            }
+            else
+            {
+                spriteRenderer.color = Color.yellow;
+                spotLight.color = Color.yellow;
+            }
         }
 
         //restart
