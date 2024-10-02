@@ -1,15 +1,16 @@
 using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class Collectibles : MonoBehaviour
 {
     public int coin = 0;
+    public Text coinCounter;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        coinCounter.text = ": " + coin;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

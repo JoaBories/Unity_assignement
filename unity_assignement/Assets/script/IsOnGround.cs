@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IsOnGround : MonoBehaviour
 {
     public Vector3 startingPosition;
     public bool isOnGround;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         transform.localPosition = startingPosition;
