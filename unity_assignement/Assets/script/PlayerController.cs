@@ -60,7 +60,10 @@ public class PlayerController : MonoBehaviour
         }
         else  GetComponent<Animator>().SetBool("air", false);
 
-        if (ground) canDoubleJump = true; 
+        if (ground) canDoubleJump = true;
+
+        if (canDoubleJump) GetComponent<SpriteRenderer>().color = Color.green;
+        else GetComponent<SpriteRenderer>().color = Color.yellow;
     }
 
     bool isOnFloor()

@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\joa.bories\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\isonground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\joa.bories\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\joa.bories\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\assets\\script\\isonground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\isonground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\joa.bories\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\collisionfix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\assets\\script\\collisionfix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\collisionfix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Collectibles.cs",
+              "DocumentMoniker": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\Collectibles.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Collectibles.cs",
+              "ToolTip": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\Collectibles.cs",
+              "RelativeToolTip": "Assets\\script\\Collectibles.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T07:33:58.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CollisionFix.cs",
               "DocumentMoniker": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\CollisionFix.cs",
               "RelativeDocumentMoniker": "Assets\\script\\CollisionFix.cs",
@@ -34,12 +51,11 @@
               "RelativeToolTip": "Assets\\script\\CollisionFix.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T13:41:00.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T13:41:00.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "IsOnGround.cs",
               "DocumentMoniker": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\IsOnGround.cs",
               "RelativeDocumentMoniker": "Assets\\script\\IsOnGround.cs",
@@ -47,18 +63,17 @@
               "RelativeToolTip": "Assets\\script\\IsOnGround.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T13:40:03.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T13:40:03.989Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\script\\PlayerController.cs",
               "ToolTip": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerController.cs",
               "RelativeToolTip": "Assets\\script\\PlayerController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB8AAAA2AAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwEEAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T11:46:25.623Z",
               "EditorCaption": ""
