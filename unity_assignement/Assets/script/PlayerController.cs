@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float dashForce;
     
+    public Vector2 dashVector;
     public bool cantMove;
 
 
@@ -27,7 +28,6 @@ public class PlayerController : MonoBehaviour
     bool collisionLeft;
     bool collisionRight;
     
-    Vector2 dashVector;
     Vector2 oldVelocity;
 
     private void Start()
@@ -95,24 +95,24 @@ public class PlayerController : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(1.5f, 2);
                 else if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(-1.5f, 2);
-                else if (Input.GetKey(KeyCode.S)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
-                else dashVector = new Vector2(oldVelocity.x, 3);
+                else if (Input.GetKey(KeyCode.S)) dashVector = new Vector2(0, 0);
+                else dashVector = new Vector2(0, 3);
             }
             else if (Input.GetKey(KeyCode.S))
             {
                 if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(1.5f, -2);
                 else if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(-1.5f, -2);
-                else if (Input.GetKey(KeyCode.W)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
-                else dashVector = new Vector2(oldVelocity.x, -3);
+                else if (Input.GetKey(KeyCode.W)) dashVector = new Vector2(0, 0);
+                else dashVector = new Vector2(0, -3);
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
+                if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(0, 0);
                 else dashVector = new Vector2(3, 0);
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
+                if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(0, 0);
                 else dashVector = new Vector2(-3, 0);
             }
 
@@ -172,6 +172,11 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = spawnPoint.transform.position;
         GetComponent<Animator>().Play("spawn");
+    }
+
+    void dashVelocity()
+    {
+        GetComponent<Rigidbody2D>().velocity = dashVector;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
