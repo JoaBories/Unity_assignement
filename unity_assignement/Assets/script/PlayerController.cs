@@ -12,23 +12,27 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
     public float dashForce;
+    
+    public bool cantMove;
 
+
+    [Header("Game Object Assign")]
     public GameObject collisionFixLeft;
     public GameObject collisionFixRight;
     public GameObject isOnGround;
     public GameObject spawnPoint;
 
-    [SerializeField] bool canDoubleJump = true;
-    [SerializeField] bool ground;
-    [SerializeField] bool collisionLeft;
-    [SerializeField] bool collisionRight;
-    [SerializeField] float canMoveTimer;
+    bool canDoubleJump;
+    bool ground;
+    bool collisionLeft;
+    bool collisionRight;
+    
     Vector2 dashVector;
+    Vector2 oldVelocity;
 
     private void Start()
     {
         transform.position = spawnPoint.transform.position;
-        canMoveTimer = 1;
     }
     void Update()
     {
@@ -41,9 +45,10 @@ public class PlayerController : MonoBehaviour
         collisionLeft = collisionFixLeft.GetComponent<CollisionFix>().collisionState;
         
         ground = isOnFloor();
-        
+        oldVelocity = rigidBody2D.velocity;
 
-        if (canMoveTimer == 0)
+
+        if (!cantMove)
         {
             //crouch
             if (Input.GetKeyDown(KeyCode.S))
@@ -63,12 +68,20 @@ public class PlayerController : MonoBehaviour
             {
                 spriteRenderer.flipX = false;
                 transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+                if (oldVelocity.x < 0)
+                {
+                    rigidBody2D.velocity = new Vector2(0, oldVelocity.y);
+                }
                 animator.SetBool("walking", true);
             }
             if (Input.GetKey(KeyCode.A) && !collisionLeft)
             {
                 spriteRenderer.flipX = true;
                 transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
+                if (oldVelocity.x > 0)
+                {
+                    rigidBody2D.velocity = new Vector2(0, oldVelocity.y);
+                }
                 animator.SetBool("walking", true);
             }
             if (!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
@@ -78,44 +91,42 @@ public class PlayerController : MonoBehaviour
 
 
             //Dash
+            if (Input.GetKey(KeyCode.W))
+            {
+                if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(1.5f, 2);
+                else if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(-1.5f, 2);
+                else if (Input.GetKey(KeyCode.S)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
+                else dashVector = new Vector2(oldVelocity.x, 3);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(1.5f, -2);
+                else if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(-1.5f, -2);
+                else if (Input.GetKey(KeyCode.W)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
+                else dashVector = new Vector2(oldVelocity.x, -3);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
+                else dashVector = new Vector2(3, 0);
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
+                else dashVector = new Vector2(-3, 0);
+            }
+
             if (Input.GetKeyDown(KeyCode.L) && canDoubleJump)
             {
-                Vector2 oldVelocity = rigidBody2D.velocity;
-
-                if (Input.GetKey(KeyCode.W))
-                {
-                    if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(1.5f, 4f);
-                    else if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(-1.5f, 4f);
-                    else if (Input.GetKey(KeyCode.S)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
-                    else dashVector = new Vector2(oldVelocity.x, 5);
-                }
-                else if (Input.GetKey(KeyCode.S))
-                {
-                    if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(1.5f, -2.5f);
-                    else if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(-1.5f, -2.5f);
-                    else if (Input.GetKey(KeyCode.W)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
-                    else dashVector = new Vector2(oldVelocity.x, -5);
-                }
-                else if (Input.GetKey(KeyCode.D))
-                {
-                    if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
-                    else dashVector = new Vector2(3, oldVelocity.y);
-                }
-                else if (Input.GetKey(KeyCode.A))
-                {
-                    if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(oldVelocity.x, oldVelocity.y);
-                    else dashVector = new Vector2(-3, oldVelocity.y);
-                }
-                
                 rigidBody2D.velocity = dashVector;
                 canDoubleJump = false;
+                animator.Play("dash");
             }
 
 
             //jump
             if (Input.GetKeyDown(KeyCode.K) && ground)
             {
-                Vector2 oldVelocity = rigidBody2D.velocity;
                 rigidBody2D.velocity = new Vector2(oldVelocity.x , jumpForce);
             }
 
@@ -146,12 +157,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             animator.Play("die");
-            canMoveTimer = 1.2f;
         }
 
         //Timer
-        canMoveTimer -= Time.deltaTime;
-        if (canMoveTimer < 0) canMoveTimer = 0;
 
     }
 
@@ -163,7 +171,6 @@ public class PlayerController : MonoBehaviour
     void die()
     {
         transform.position = spawnPoint.transform.position;
-        canMoveTimer = 1;
         GetComponent<Animator>().Play("spawn");
     }
 
@@ -174,7 +181,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Damage"))
         {
             animator.Play("die");
-            canMoveTimer = 1.2f;
         }
     }
 }
