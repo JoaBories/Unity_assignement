@@ -6,6 +6,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.U2D;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     
     public Vector2 dashVector;
     public bool cantMove;
+    public int coin = 0;
 
 
     [Header("Game Object Assign")]
@@ -22,11 +24,14 @@ public class PlayerController : MonoBehaviour
     public GameObject collisionFixRight;
     public GameObject isOnGround;
     public GameObject spawnPoint;
+    public Text coinCounter;
+    public GameObject bulletPrefab;
 
     bool canDoubleJump;
     bool ground;
     bool collisionLeft;
     bool collisionRight;
+    float bulletDirection;
     
     Vector2 oldVelocity;
 
@@ -47,19 +52,16 @@ public class PlayerController : MonoBehaviour
         ground = isOnFloor();
         oldVelocity = rigidBody2D.velocity;
 
+        coinCounter.text = ": " + coin;
 
         if (!cantMove)
         {
+
             //crouch
             if (Input.GetKeyDown(KeyCode.S))
             {
                 transform.localScale = new Vector3(2, 1.5f, 2);
                 transform.position += new Vector3(0, -0.05f, 0);
-            }
-            if (Input.GetKeyUp(KeyCode.S))
-            {
-                transform.localScale = new Vector3(2, 2, 2);
-                transform.position += new Vector3(0, 0.05f, 0);
             }
 
 
@@ -93,34 +95,44 @@ public class PlayerController : MonoBehaviour
             //Dash
             if (Input.GetKey(KeyCode.W))
             {
-                if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(1.5f, 2);
-                else if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(-1.5f, 2);
-                else if (Input.GetKey(KeyCode.S)) dashVector = new Vector2(0, 0);
-                else dashVector = new Vector2(0, 3);
+                if (Input.GetKey(KeyCode.D)) { dashVector = new Vector2(1.5f, 2); bulletDirection = -126.87f; }
+                else if (Input.GetKey(KeyCode.A)) {dashVector = new Vector2(-1.5f, 2); bulletDirection = -53.13f; }
+                else if (Input.GetKey(KeyCode.S)) {dashVector = new Vector2(0, 0);bulletDirection = 10; }
+                else {dashVector = new Vector2(0, 3); bulletDirection = 270; }
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(1.5f, -2);
-                else if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(-1.5f, -2);
-                else if (Input.GetKey(KeyCode.W)) dashVector = new Vector2(0, 0);
-                else dashVector = new Vector2(0, -3);
+                if (Input.GetKey(KeyCode.D)) {dashVector = new Vector2(1.5f, -2);bulletDirection = 126.87f; }
+                else if (Input.GetKey(KeyCode.A)) {dashVector = new Vector2(-1.5f, -2);bulletDirection = 53.13f; }
+                else if (Input.GetKey(KeyCode.W)) {dashVector = new Vector2(0, 0);bulletDirection = 10; }
+                else {dashVector = new Vector2(0, -3); bulletDirection = 90; }
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKey(KeyCode.A)) dashVector = new Vector2(0, 0);
-                else dashVector = new Vector2(3, 0);
+                if (Input.GetKey(KeyCode.A)) {dashVector = new Vector2(0, 0); bulletDirection = 10; }
+                else {dashVector = new Vector2(3, 0); bulletDirection = 180; }
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                if (Input.GetKey(KeyCode.D)) dashVector = new Vector2(0, 0);
-                else dashVector = new Vector2(-3, 0);
+                if (Input.GetKey(KeyCode.D)) {dashVector = new Vector2(0, 0); bulletDirection = 10; }
+                else {dashVector = new Vector2(-3, 0); bulletDirection = 0; }
             }
 
             if (Input.GetKeyDown(KeyCode.L) && canDoubleJump)
             {
+                if(bulletDirection == 10)
+                {
+                    if (spriteRenderer.flipX) { dashVector = new Vector2(-3, 0); bulletDirection = 0; }
+                    else { dashVector = new Vector2(3, 0); bulletDirection = 180; }
+                }
+
                 rigidBody2D.velocity = dashVector;
                 canDoubleJump = false;
                 animator.Play("dash");
+                GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                bullet.GetComponent<Bullet>().directionVector = new Vector3(-dashVector.x, -dashVector.y, 0);
+                bullet.GetComponent<Bullet>().directionAngle = bulletDirection;
+                bullet.GetComponent<Bullet>().player = gameObject;
             }
 
 
@@ -131,6 +143,7 @@ public class PlayerController : MonoBehaviour
             }
 
 
+            // air & ground states
             if (!ground)
             {
                 animator.SetBool("air", true);
@@ -151,6 +164,12 @@ public class PlayerController : MonoBehaviour
                 spriteRenderer.color = Color.yellow;
                 spotLight.color = Color.yellow;
             }
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            transform.localScale = new Vector3(2, 2, 2);
+            transform.position += new Vector3(0, 0.05f, 0);
         }
 
         //restart
@@ -186,6 +205,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Damage"))
         {
             animator.Play("die");
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("coin"))
+        {
+            collision.gameObject.SetActive(false);
+            coin++;
         }
     }
 }

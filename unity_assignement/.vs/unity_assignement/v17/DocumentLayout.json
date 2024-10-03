@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\assets\\script\\playercollectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercollectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\joa.bories\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\joa.bories\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\joa.bories\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\assets\\script\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\assets\\script\\isonground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,32 +30,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Bullet.cs",
+              "ToolTip": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\Bullet.cs",
+              "RelativeToolTip": "Assets\\script\\Bullet.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T12:39:52.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\script\\PlayerController.cs",
+              "ViewState": "AQIAALgAAAAAAAAAAAAowNQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T11:46:25.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Collectibles.cs",
               "DocumentMoniker": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\Collectibles.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Collectibles.cs",
               "ToolTip": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\Collectibles.cs",
               "RelativeToolTip": "Assets\\script\\Collectibles.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAwAAAAMAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T10:15:35.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerCollectibles.cs",
-              "DocumentMoniker": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerCollectibles.cs",
-              "RelativeDocumentMoniker": "Assets\\script\\PlayerCollectibles.cs",
-              "ToolTip": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerCollectibles.cs",
-              "RelativeToolTip": "Assets\\script\\PlayerCollectibles.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T07:33:58.041Z",
               "EditorCaption": ""
             },
             {
@@ -81,18 +94,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T13:40:03.989Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\script\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\joa.bories\\Documents\\github\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\script\\PlayerController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAALMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T11:46:25.623Z"
             }
           ]
         }
