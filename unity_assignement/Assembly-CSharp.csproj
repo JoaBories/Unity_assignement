@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\script\PlayerController.cs" />
+    <Compile Include="Assets\script\PlayerCollectibles.cs" />
     <Compile Include="Assets\script\Collectibles.cs" />
     <Compile Include="Assets\script\IsOnGround.cs" />
     <Compile Include="Assets\script\CollisionFix.cs" />

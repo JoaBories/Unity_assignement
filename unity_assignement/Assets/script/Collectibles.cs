@@ -1,24 +1,48 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using UnityEngine.UI;
+
 
 public class Collectibles : MonoBehaviour
 {
-    public int coin = 0;
-    public Text coinCounter;
+    public float maxHeightDiff;
+    public float speed;
+
+    public Vector3 startPosition;
+    bool up;
+
+    private void Start()
+    {
+        startPosition = transform.position;
+    }
+
 
     void Update()
     {
-        coinCounter.text = ": " + coin;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("coin"))
+        if (up)
         {
-            collision.gameObject.SetActive(false);
-            coin++;
+            if (Math.Abs(startPosition.y - transform.position.y) < maxHeightDiff)
+            {
+                transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+            }
+            else
+            {
+                transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
+                up = false;
+            }
+        }
+        else
+        {
+            if (Math.Abs(startPosition.y - transform.position.y) < maxHeightDiff)
+            {
+                transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
+            }
+            else
+            {
+                transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+                up = true;
+            }
         }
     }
 }
