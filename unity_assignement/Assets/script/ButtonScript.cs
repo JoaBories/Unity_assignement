@@ -16,6 +16,7 @@ public class ButtonScript : MonoBehaviour
         if (buttonType == "resume") GetComponent<Button>().onClick.AddListener(resume);
         if (buttonType == "menu") GetComponent<Button>().onClick.AddListener(menu);
         if (buttonType == "quit") GetComponent<Button>().onClick.AddListener(quit);
+        if (buttonType == "play") GetComponent<Button>().onClick.AddListener(play);
     }
 
     // Update is called once per frame
@@ -29,5 +30,7 @@ public class ButtonScript : MonoBehaviour
     void menu() { SceneManager.LoadScene("scenes/Menu"); }
 
     void quit() { Application.Quit(); }
+    
+    void play() { SceneManager.LoadScene("scenes/FirstLevel"); }
 
 }

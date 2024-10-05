@@ -34,4 +34,11 @@ public class GolemEnemy : MonoBehaviour
             else spriteRenderer.flipX = true;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemyDamage"))
+        {
+            collision.transform.parent.GetComponent<Bullet>().destroyBullet();
+        }
+    }
 }

@@ -25,17 +25,22 @@ public class Bullet : MonoBehaviour
         if (created)
         {
             transform.position += directionVector * speed * Time.deltaTime;
-            if ((transform.position - player.transform.position).magnitude > maxDistance) Destroy(gameObject);
+            if ((transform.position - player.transform.position).magnitude > maxDistance) destroyBullet();
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground")) Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Ground")) destroyBullet();
     }
 
     public void launch()
     {
         created = true;
+    }
+
+    public void destroyBullet()
+    {
+        Destroy(gameObject);
     }
 }

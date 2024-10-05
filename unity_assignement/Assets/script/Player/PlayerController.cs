@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPrefab;
     public CinemachineVirtualCamera playerCamera;
 
-    bool canDoubleJump;
+    bool canDoubleJump = true;
     bool ground;
     bool collisionLeft;
     bool collisionRight;
@@ -61,14 +61,6 @@ public class PlayerController : MonoBehaviour
 
             if (!cantMove)
             {
-
-                //crouch
-                if (Input.GetKeyDown(KeyCode.S))
-                {
-                    transform.localScale = new Vector3(2, 1.5f, 2);
-                    transform.position += new Vector3(0, -0.05f, 0);
-                }
-
 
                 //move
                 if (Input.GetKey(KeyCode.D) && !collisionRight)
@@ -142,10 +134,7 @@ public class PlayerController : MonoBehaviour
 
 
                 //jump
-                if (Input.GetKeyDown(KeyCode.K) && ground)
-                {
-                    rigidBody2D.velocity = new Vector2(oldVelocity.x, jumpForce);
-                }
+                if (Input.GetKeyDown(KeyCode.K) && ground) rigidBody2D.velocity = new Vector2(oldVelocity.x, jumpForce);
 
 
                 // air & ground states
@@ -171,24 +160,18 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyUp(KeyCode.S))
-            {
-                transform.localScale = new Vector3(2, 2, 2);
-                transform.position += new Vector3(0, 0.05f, 0);
-            }
-
             //restart
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R)) die();
+
+            if (transform.position.y < -2)
             {
                 die();
+                rigidBody2D.velocity = Vector2.zero;
             }
         }
 
         //Pause
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pauseFunction();
-        }
+        if (Input.GetKeyDown(KeyCode.Escape)) pauseFunction();
 
     }
 
@@ -239,10 +222,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Damage"))
-        {
-            die();
-        }
+        if (collision.gameObject.CompareTag("Damage")) die();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

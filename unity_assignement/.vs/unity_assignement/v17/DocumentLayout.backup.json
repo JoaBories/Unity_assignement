@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\assets\\script\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\assets\\script\\enemy\\golemenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\golemenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\tipszone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\tipszone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\github\\unity_assignement\\unity_assignement\\assets\\script\\buttonscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\buttonscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\assets\\script\\enemy\\skullenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\skullenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\assets\\script\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\assets\\script\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AD5A88-71BF-D80D-7B9D-DAE6C8834BB9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +38,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TipsZone.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\TipsZone.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\TipsZone.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\TipsZone.cs",
+              "RelativeToolTip": "Assets\\script\\TipsZone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T08:26:18.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GolemEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\enemy\\GolemEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\enemy\\GolemEnemy.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\enemy\\GolemEnemy.cs",
+              "RelativeToolTip": "Assets\\script\\enemy\\GolemEnemy.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T07:18:37.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Bullet.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\Bullet.cs",
+              "RelativeToolTip": "Assets\\script\\Bullet.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T07:15:25.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SkullEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\enemy\\SkullEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\enemy\\SkullEnemy.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\enemy\\SkullEnemy.cs",
+              "RelativeToolTip": "Assets\\script\\enemy\\SkullEnemy.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T07:12:34.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Collectibles.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\Collectibles.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Collectibles.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\Collectibles.cs",
+              "RelativeToolTip": "Assets\\script\\Collectibles.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T07:11:49.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ButtonScript.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\ButtonScript.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\ButtonScript.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\ButtonScript.cs",
+              "RelativeToolTip": "Assets\\script\\ButtonScript.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T14:44:16.605Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\script\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\script\\PlayerController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAA+AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\Player\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Player\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Unity_assignement\\unity_assignement\\Assets\\script\\Player\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\script\\Player\\PlayerController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwB8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T11:46:25.623Z",
+              "WhenOpened": "2024-10-04T14:12:31.419Z",
               "EditorCaption": ""
             }
           ]
