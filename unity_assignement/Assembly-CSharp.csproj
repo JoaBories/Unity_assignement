@@ -63,6 +63,7 @@
     <Compile Include="Assets\script\Bullet.cs" />
     <Compile Include="Assets\script\enemy\SkullEnemy.cs" />
     <Compile Include="Assets\script\ButtonScript.cs" />
+    <Compile Include="Assets\script\EndOfLevel.cs" />
     <Compile Include="Assets\script\Collectibles.cs" />
     <Compile Include="Assets\script\enemy\GolemEnemy.cs" />
     <Compile Include="Assets\script\TipsZone.cs" />
